@@ -1034,7 +1034,8 @@
 
                 $('a', $saveButton).click($.proxy(function(){
                     var _tmp = this.getSelected();
-                    getOnClickSave(_tmp);
+                    var _tmp2 = $('option', this.$select).context.id; 
+                    getOnClickSave(_tmp2, _tmp);
                 }, this));
 
                 this.$ul.prepend($saveButton);

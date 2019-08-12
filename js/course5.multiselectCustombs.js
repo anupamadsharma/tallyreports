@@ -6,7 +6,7 @@ $(function () {
         });
 }); 
 
-function getOnClickSave(selectedVals) {
+function getOnClickSave(id, selectedVals) {
     var _tmpValues = [];
 
     $(selectedVals).each(function(index, row){
@@ -14,7 +14,7 @@ function getOnClickSave(selectedVals) {
        _tmpValues.push(_tmpVal);
     });
 
-    alert('Hello its done : ' + _tmpValues.join(','));
+    alert('Hello its done : ' + id + ' : ' + _tmpValues.join(','));
 } 
  
 
