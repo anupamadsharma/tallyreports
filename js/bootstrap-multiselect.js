@@ -1034,7 +1034,13 @@
 
                 $('a', $saveButton).click($.proxy(function(){
                     var _tmp = this.getSelected();
-                    var _tmp2 = $('option', this.$select).context.id; 
+                    //var _tmp2 = (".multiselect-save").parents().siblings("select").attr("id"); // this is not working
+                                        //
+                    var _tmp2 = $('option', this.$select).context.id; // working
+                    //var _tmp2 = $(this)[0].$select[0].id; // working
+                    
+                    //alert(JSON.stringify(_tmp2));// Check this for object stringify
+                    
                     getOnClickSave(_tmp2, _tmp);
                 }, this));
 
